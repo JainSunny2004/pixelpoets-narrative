@@ -87,7 +87,7 @@ function ServiceDetail() {
           <div className="bg-surface border border-border p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-accent mb-5">Deliverables</p>
             <ul className="space-y-4">
-              {service.deliverables.map((d) => (
+              {service.deliverables.map((d: string) => (
                 <li key={d} className="flex gap-3 text-foreground/85">
                   <Check size={18} className="text-accent shrink-0 mt-0.5" strokeWidth={1.6} />
                   <span>{d}</span>
@@ -124,7 +124,7 @@ function ServiceDetail() {
           <h2 className="font-display text-3xl md:text-5xl max-w-2xl leading-[1.05]">For this craft, specifically.</h2>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
-          {service.differentiators.map((d, i) => (
+          {service.differentiators.map((d: { title: string; body: string }, i: number) => (
             <Reveal key={d.title} delay={i * 80}>
               <div className="bg-surface border border-border p-7 h-full">
                 <span className="text-accent text-2xl font-display">0{i + 1}.</span>

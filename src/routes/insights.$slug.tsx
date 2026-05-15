@@ -92,7 +92,7 @@ function InsightDetail() {
             {post.excerpt}
           </p>
           <div className="mt-12 space-y-7 text-foreground/85 text-lg leading-[1.75]">
-            {post.body.map((para, i) => <p key={i}>{para}</p>)}
+            {post.body.map((para: string, i: number) => <p key={i}>{para}</p>)}
           </div>
         </div>
       </article>
