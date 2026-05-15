@@ -3,7 +3,7 @@ import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { getService, services, work } from "@/lib/site-data";
 
-export const Route = createFileRoute("/services/$slug")({
+export const Route = createFileRoute("/services_/$slug")({
   loader: ({ params }) => {
     const service = getService(params.slug);
     if (!service) throw notFound();

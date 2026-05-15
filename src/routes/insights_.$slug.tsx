@@ -3,7 +3,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { getInsight, insights } from "@/lib/site-data";
 
-export const Route = createFileRoute("/insights/$slug")({
+export const Route = createFileRoute("/insights_/$slug")({
   loader: ({ params }) => {
     const post = getInsight(params.slug);
     if (!post) throw notFound();
