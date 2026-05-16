@@ -51,6 +51,9 @@ export function Navbar() {
           <Link to="/" className={`${linkBase} ${isActive("/") && loc.pathname === "/" ? linkActive : linkInactive}`}>
             Home
           </Link>
+          <Link to="/about" className={`${linkBase} ${isActive("/about") ? linkActive : linkInactive}`}>
+            About
+          </Link>
 
           <div
             className="relative"
