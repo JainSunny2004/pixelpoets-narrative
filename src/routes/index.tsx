@@ -3,6 +3,7 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services, work } from "@/lib/site-data";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
