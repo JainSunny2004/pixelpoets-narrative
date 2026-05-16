@@ -131,6 +131,7 @@ export function Navbar() {
           </div>
           <nav className="flex-1 flex flex-col px-8 pt-6 gap-5 overflow-y-auto pb-10">
             <Link to="/" className="font-display text-3xl">Home</Link>
+            <Link to="/about" className="font-display text-3xl">About</Link>
             <div>
               <div className="font-display text-3xl mb-3">Services</div>
               <ul className="pl-1 flex flex-col gap-2.5">
