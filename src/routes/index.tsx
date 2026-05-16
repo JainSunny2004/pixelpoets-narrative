@@ -23,7 +23,7 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative grain min-h-screen flex flex-col justify-center overflow-hidden">
+      <section className="relative grain min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
         {/* Background image */}
         <img
           src={heroBg}
@@ -31,43 +31,47 @@ function HomePage() {
           aria-hidden="true"
           width={1920}
           height={1280}
-          className="absolute inset-0 -z-20 w-full h-full object-cover object-right scale-105 motion-safe:animate-[heroDrift_24s_ease-in-out_infinite_alternate]"
+          className="absolute inset-0 -z-20 w-full h-full object-cover object-center scale-105 motion-safe:animate-[heroDrift_24s_ease-in-out_infinite_alternate]"
         />
-        {/* Cinematic overlays for legibility */}
+        {/* Cinematic overlays for legibility + seamless bottom fade into next section */}
         <div
           className="absolute inset-0 -z-10"
           style={{
             background:
-              "radial-gradient(70% 90% at 20% 50%, rgba(10,9,8,0.92) 0%, rgba(14,13,11,0.78) 40%, rgba(14,13,11,0.35) 70%, rgba(14,13,11,0.15) 100%), linear-gradient(180deg, rgba(10,9,8,0.55) 0%, transparent 25%, transparent 70%, rgba(10,9,8,0.85) 100%)",
+              "radial-gradient(80% 60% at 50% 45%, rgba(14,13,11,0.35) 0%, rgba(14,13,11,0.55) 55%, rgba(14,13,11,0.85) 100%)",
           }}
         />
-        <div className="mx-auto max-w-7xl px-6 pt-32 pb-20 w-full">
+        <div
+          className="absolute inset-x-0 top-0 h-40 -z-10 pointer-events-none"
+          style={{ background: "linear-gradient(180deg, rgba(10,9,8,0.85) 0%, rgba(10,9,8,0.0) 100%)" }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-[55%] -z-10 pointer-events-none"
+          style={{ background: "linear-gradient(180deg, rgba(14,13,11,0) 0%, rgba(14,13,11,0.75) 55%, hsl(var(--background)) 100%)" }}
+        />
+
+        <div className="mx-auto max-w-5xl px-6 pt-32 pb-32 w-full">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.32em] text-accent mb-8">A Cinematic Storytelling Studio</p>
+            <p className="text-[11px] md:text-xs uppercase tracking-[0.42em] text-accent mb-10">A Cinematic Storytelling Studio</p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="font-display text-[clamp(2.75rem,8vw,7rem)] leading-[0.95] tracking-tight">
-              Every Brand <br className="hidden sm:block" />
-              Has a Story.
+            <h1 className="font-display text-[clamp(2.75rem,8.5vw,7.5rem)] leading-[0.95] tracking-tight">
+              Every Brand Has <br className="hidden sm:block" />
+              <span className="italic text-accent">a Story.</span>
             </h1>
           </Reveal>
-          <Reveal delay={300}>
-            <h2 className="font-display italic text-[clamp(1.75rem,5vw,4.25rem)] leading-tight text-foreground/85 mt-3">
-              We Make the World Feel It.
-            </h2>
-          </Reveal>
-          <Reveal delay={520}>
-            <p className="text-muted-foreground text-base md:text-lg max-w-xl mt-8 leading-relaxed">
-              PixelPoets Productions — a creative agency for visual storytelling, built on the belief that the right story, told well, changes everything.
+          <Reveal delay={320}>
+            <p className="text-foreground/75 text-base md:text-lg mt-8 tracking-wide">
+              We Make the World Feel It. <span className="text-faint">— PixelPoets Productions</span>
             </p>
           </Reveal>
-          <Reveal delay={680}>
-            <div className="flex flex-wrap gap-3 mt-10">
-              <Link to="/work" className="inline-flex items-center gap-2 border border-border px-6 py-3.5 text-sm rounded-sm hover:border-accent hover:text-accent transition-colors">
-                View Our Work <ArrowRight size={16} />
+          <Reveal delay={520}>
+            <div className="flex flex-wrap gap-4 mt-12 justify-center">
+              <Link to="/work" className="inline-flex items-center gap-2 border border-accent/70 text-accent px-7 py-3.5 text-xs uppercase tracking-[0.22em] rounded-sm hover:bg-accent hover:text-accent-foreground transition-colors">
+                <ArrowRight size={14} /> Watch Our Work
               </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3.5 text-sm font-medium rounded-sm hover:bg-accent-hover transition-colors">
-                Let's Create Together <ArrowRight size={16} />
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-background/70 backdrop-blur border border-border text-foreground px-7 py-3.5 text-xs uppercase tracking-[0.22em] rounded-sm hover:border-accent hover:text-accent transition-colors">
+                Collaborate With Us
               </Link>
             </div>
           </Reveal>
