@@ -24,11 +24,21 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative grain min-h-screen flex flex-col justify-center overflow-hidden">
+        {/* Background image */}
+        <img
+          src={heroBg}
+          alt=""
+          aria-hidden="true"
+          width={1920}
+          height={1280}
+          className="absolute inset-0 -z-20 w-full h-full object-cover object-right scale-105 motion-safe:animate-[heroDrift_24s_ease-in-out_infinite_alternate]"
+        />
+        {/* Cinematic overlays for legibility */}
         <div
           className="absolute inset-0 -z-10"
           style={{
             background:
-              "radial-gradient(80% 60% at 70% 30%, rgba(200,146,42,0.12) 0%, transparent 60%), radial-gradient(60% 80% at 10% 90%, rgba(200,146,42,0.06) 0%, transparent 70%), linear-gradient(180deg, #0a0908 0%, #0e0d0b 100%)",
+              "radial-gradient(70% 90% at 20% 50%, rgba(10,9,8,0.92) 0%, rgba(14,13,11,0.78) 40%, rgba(14,13,11,0.35) 70%, rgba(14,13,11,0.15) 100%), linear-gradient(180deg, rgba(10,9,8,0.55) 0%, transparent 25%, transparent 70%, rgba(10,9,8,0.85) 100%)",
           }}
         />
         <div className="mx-auto max-w-7xl px-6 pt-32 pb-20 w-full">
