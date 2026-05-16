@@ -20,6 +20,7 @@ export function Footer() {
           <h4 className="text-xs uppercase tracking-[0.2em] text-faint mb-5">Quick Links</h4>
           <ul className="space-y-3 text-sm">
             <li><Link to="/" className="text-foreground/85 hover:text-accent">Home</Link></li>
+            <li><Link to="/about" className="text-foreground/85 hover:text-accent">About</Link></li>
             <li><Link to="/work" className="text-foreground/85 hover:text-accent">Our Work</Link></li>
             <li><Link to="/insights" className="text-foreground/85 hover:text-accent">Insights & Blog</Link></li>
             <li><Link to="/contact" className="text-foreground/85 hover:text-accent">Contact</Link></li>
