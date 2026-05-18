@@ -8,6 +8,8 @@ export interface Service {
   description: string;
   deliverables: string[];
   differentiators: { title: string; body: string }[];
+  heroVideo: string;
+  heroPoster: string;
 }
 
 export const services: Service[] = [
@@ -29,6 +31,8 @@ export const services: Service[] = [
       { title: "Built for the funnel", body: "Hooks, holds, and CTAs designed against your conversion data." },
       { title: "Variants at scale", body: "Dozens of cuts from one shoot — no compromise on craft." },
     ],
+    heroVideo: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    heroPoster: "https://picsum.photos/seed/ai-ads-hero/1920/1080",
   },
   {
     slug: "virtual-tours",
@@ -48,6 +52,8 @@ export const services: Service[] = [
       { title: "Frictionless on the web", body: "Loads in a tab. Works on a phone. Looks premium everywhere." },
       { title: "Narrative wayfinding", body: "Guided arcs that lead visitors through a story, not just a floor plan." },
     ],
+    heroVideo: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    heroPoster: "https://picsum.photos/seed/virtual-tours-hero/1920/1080",
   },
   {
     slug: "reels-shorts",
@@ -67,6 +73,8 @@ export const services: Service[] = [
       { title: "Series, not singles", body: "Episodic worlds that compound attention across weeks." },
       { title: "Sound-first cuts", body: "We treat audio as a co-lead, not a layer." },
     ],
+    heroVideo: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    heroPoster: "https://picsum.photos/seed/reels-hero/1920/1080",
   },
   {
     slug: "corporate-documentaries",
@@ -86,6 +94,8 @@ export const services: Service[] = [
       { title: "Editorial restraint", body: "No b-roll filler. Every cut earns its place in the arc." },
       { title: "Built to live forever", body: "Films designed for keynotes, recruiting, and the next decade of you." },
     ],
+    heroVideo: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    heroPoster: "https://picsum.photos/seed/docs-hero/1920/1080",
   },
 ];
 

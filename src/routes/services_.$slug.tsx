@@ -55,9 +55,35 @@ function ServiceDetail() {
   return (
     <>
       {/* HERO */}
-      <section className="relative grain pt-36 pb-20 overflow-hidden">
-        <div className="absolute inset-0 -z-10" style={{ background: "radial-gradient(60% 60% at 80% 20%, rgba(200,146,42,0.10) 0%, transparent 60%), #0e0d0b" }} />
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative grain pt-36 pb-24 overflow-hidden min-h-[80vh] flex items-end">
+        {/* Background video */}
+        <video
+          key={service.slug}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={service.heroPoster}
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 w-full h-full object-cover"
+        >
+          <source src={service.heroVideo} type="video/mp4" />
+        </video>
+        {/* Cinematic overlays */}
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "radial-gradient(70% 60% at 70% 30%, rgba(200,146,42,0.18) 0%, transparent 60%), linear-gradient(180deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.7) 55%, hsl(var(--background)) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-x-0 top-0 h-32 -z-10 pointer-events-none"
+          style={{ background: "linear-gradient(180deg, rgba(10,9,8,0.85) 0%, rgba(10,9,8,0) 100%)" }}
+        />
+
+        <div className="relative mx-auto max-w-7xl px-6 w-full">
           <Reveal>
             <nav className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-faint mb-10">
               <Link to="/services" className="hover:text-accent">Services</Link>
@@ -67,7 +93,7 @@ function ServiceDetail() {
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
               {service.name}
             </h1>
-            <p className="font-display italic text-2xl md:text-3xl text-foreground/80 mt-6 max-w-3xl leading-snug">
+            <p className="font-display italic text-2xl md:text-3xl text-foreground/85 mt-6 max-w-3xl leading-snug">
               {service.tagline}
             </p>
           </Reveal>
