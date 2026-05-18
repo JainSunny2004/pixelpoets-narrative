@@ -8,6 +8,8 @@ export interface Service {
   description: string;
   deliverables: string[];
   differentiators: { title: string; body: string }[];
+  heroVideo: string;
+  heroPoster: string;
 }
 
 export const services: Service[] = [
